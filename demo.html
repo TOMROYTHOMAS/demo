@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Auto Sales</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#3b82f6", secondary: "#10b981" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Inter', sans-serif;
+      }
+      .hero-section {
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0) 100%);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+      .custom-select {
+          appearance: none;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23374151'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: right 0.5rem center;
+          background-size: 1.5em 1.5em;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <div class="flex items-center">
+          <a href="#" class="text-3xl font-['Pacifico'] text-primary mr-10"
+            >logo</a
+          >
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#"
+              class="font-medium text-gray-900 border-b-2 border-primary"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="font-medium text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-primary transition-all"
+              >Inventory</a
+            >
+            <a
+              href="#"
+              class="font-medium text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-primary transition-all"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="font-medium text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-primary transition-all"
+              >About Us</a
+            >
+            <a
+              href="#"
+              class="font-medium text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-primary transition-all"
+              >Contact</a
+            >
+          </nav>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <div class="relative hidden md:block">
+            <input
+              type="text"
+              placeholder="Search vehicles..."
+              class="pl-10 pr-4 py-2 w-64 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+            />
+            <div
+              class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400"
+            >
+              <i class="ri-search-line"></i>
+            </div>
+          </div>
+          <button
+            class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center"
+          >
+            <div class="w-5 h-5 flex items-center justify-center mr-2">
+              <i class="ri-exchange-dollar-line"></i>
+            </div>
+            Sell Your Car
+          </button>
+          <button
+            class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      class="hero-section relative h-[600px]"
+      style="background-image: url('https://readdy.ai/api/search-image?query=luxury%20modern%20car%20showroom%20with%20sleek%20sports%20cars%20and%20luxury%20vehicles%20on%20display%2C%20professional%20lighting%2C%20modern%20architecture%2C%20glass%20walls%2C%20clean%20and%20elegant%20environment%2C%20high-end%20dealership&width=1600&height=800&seq=1&orientation=landscape')"
+    >
+      <div class="container mx-auto px-4 h-full flex items-center">
+        <div class="w-full md:w-1/2 z-10">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Find Your Perfect Drive
+          </h1>
+          <p class="text-xl text-gray-700 mb-8">
+            Premium selection of quality vehicles with exceptional service and
+            unbeatable prices.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <h3 class="text-lg font-semibold mb-4">Quick Search</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Make</label
+                >
+                <div class="relative">
+                  <select
+                    class="w-full border border-gray-300 rounded p-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary text-sm custom-select"
+                  >
+                    <option value="">Any Make</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="honda">Honda</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Model</label
+                >
+                <div class="relative">
+                  <select
+                    class="w-full border border-gray-300 rounded p-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary text-sm custom-select"
+                  >
+                    <option value="">Any Model</option>
+                    <option value="a4">A4</option>
+                    <option value="3-series">3 Series</option>
+                    <option value="c-class">C-Class</option>
+                    <option value="camry">Camry</option>
+                    <option value="accord">Accord</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Price Range</label
+                >
+                <div class="relative">
+                  <select
+                    class="w-full border border-gray-300 rounded p-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary text-sm custom-select"
+                  >
+                    <option value="">Any Price</option>
+                    <option value="10000">Under $10,000</option>
+                    <option value="20000">Under $20,000</option>
+                    <option value="30000">Under $30,000</option>
+                    <option value="40000">Under $40,000</option>
+                    <option value="50000">Under $50,000</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Year</label
+                >
+                <div class="relative">
+                  <select
+                    class="w-full border border-gray-300 rounded p-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary text-sm custom-select"
+                  >
+                    <option value="">Any Year</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="flex space-x-4">
+              <button
+                class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex-1 flex items-center justify-center"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-search-line"></i>
+                </div>
+                Search Vehicles
+              </button>
+              <button
+                class="bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap flex-1 flex items-center justify-center"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-calendar-check-line"></i>
+                </div>
+                Schedule Test Drive
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Vehicles Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-3xl font-bold text-gray-900">Featured Vehicles</h2>
+          <div class="flex space-x-2">
+            <button
+              class="bg-gray-100 text-gray-700 px-4 py-2 rounded-button font-medium hover:bg-gray-200 transition-all whitespace-nowrap flex items-center"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-filter-3-line"></i>
+              </div>
+              Filter
+            </button>
+            <button
+              class="bg-gray-100 text-gray-700 px-4 py-2 rounded-button font-medium hover:bg-gray-200 transition-all whitespace-nowrap flex items-center"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-sort-desc"></i>
+              </div>
+              Sort By
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        >
+          <!-- Car 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=2023%20BMW%205%20Series%20luxury%20sedan%20in%20metallic%20blue%20color%2C%20professional%20studio%20lighting%2C%20clean%20background%2C%20high-end%20dealership%20quality%20photo%2C%20front%20three-quarter%20view%2C%20detailed%2C%20realistic&width=600&height=400&seq=2&orientation=landscape"
+                alt="2023 BMW 5 Series"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  BMW 5 Series
+                </h3>
+                <span
+                  class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >2023</span
+                >
+              </div>
+              <div class="text-2xl font-bold text-primary mb-3">$52,800</div>
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-dashboard-3-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">12,450 mi</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-settings-5-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Automatic</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-gas-station-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Hybrid</span>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center justify-center"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-eye-line"></i>
+                </div>
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Car 2 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=2024%20Mercedes-Benz%20E-Class%20luxury%20sedan%20in%20silver%20color%2C%20professional%20studio%20lighting%2C%20clean%20background%2C%20high-end%20dealership%20quality%20photo%2C%20front%20three-quarter%20view%2C%20detailed%2C%20realistic&width=600&height=400&seq=3&orientation=landscape"
+                alt="2024 Mercedes-Benz E-Class"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Mercedes E-Class
+                </h3>
+                <span
+                  class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >2024</span
+                >
+              </div>
+              <div class="text-2xl font-bold text-primary mb-3">$64,500</div>
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-dashboard-3-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">5,230 mi</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-settings-5-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Automatic</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-gas-station-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Gasoline</span>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center justify-center"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-eye-line"></i>
+                </div>
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Car 3 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=2023%20Audi%20A6%20luxury%20sedan%20in%20black%20color%2C%20professional%20studio%20lighting%2C%20clean%20background%2C%20high-end%20dealership%20quality%20photo%2C%20front%20three-quarter%20view%2C%20detailed%2C%20realistic&width=600&height=400&seq=4&orientation=landscape"
+                alt="2023 Audi A6"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-semibold text-gray-900">Audi A6</h3>
+                <span
+                  class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >2023</span
+                >
+              </div>
+              <div class="text-2xl font-bold text-primary mb-3">$58,900</div>
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-dashboard-3-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">8,750 mi</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-settings-5-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Automatic</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-gas-station-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Diesel</span>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center justify-center"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-eye-line"></i>
+                </div>
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Car 4 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=2024%20Tesla%20Model%203%20electric%20sedan%20in%20white%20color%2C%20professional%20studio%20lighting%2C%20clean%20background%2C%20high-end%20dealership%20quality%20photo%2C%20front%20three-quarter%20view%2C%20detailed%2C%20realistic&width=600&height=400&seq=5&orientation=landscape"
+                alt="2024 Tesla Model 3"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Tesla Model 3
+                </h3>
+                <span
+                  class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >2024</span
+                >
+              </div>
+              <div class="text-2xl font-bold text-primary mb-3">$46,990</div>
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-dashboard-3-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">3,210 mi</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-settings-5-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Automatic</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-flashlight-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Electric</span>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center justify-center"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-eye-line"></i>
+                </div>
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Car 5 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=2023%20Lexus%20RX%20luxury%20SUV%20in%20metallic%20gray%20color%2C%20professional%20studio%20lighting%2C%20clean%20background%2C%20high-end%20dealership%20quality%20photo%2C%20front%20three-quarter%20view%2C%20detailed%2C%20realistic&width=600&height=400&seq=6&orientation=landscape"
+                alt="2023 Lexus RX"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-semibold text-gray-900">Lexus RX</h3>
+                <span
+                  class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >2023</span
+                >
+              </div>
+              <div class="text-2xl font-bold text-primary mb-3">$54,700</div>
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-dashboard-3-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">15,320 mi</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-settings-5-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Automatic</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-gas-station-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Hybrid</span>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center justify-center"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-eye-line"></i>
+                </div>
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Car 6 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=2024%20Porsche%20Cayenne%20luxury%20SUV%20in%20red%20color%2C%20professional%20studio%20lighting%2C%20clean%20background%2C%20high-end%20dealership%20quality%20photo%2C%20front%20three-quarter%20view%2C%20detailed%2C%20realistic&width=600&height=400&seq=7&orientation=landscape"
+                alt="2024 Porsche Cayenne"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Porsche Cayenne
+                </h3>
+                <span
+                  class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >2024</span
+                >
+              </div>
+              <div class="text-2xl font-bold text-primary mb-3">$79,200</div>
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-dashboard-3-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">7,840 mi</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-settings-5-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Automatic</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-gas-station-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Gasoline</span>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center justify-center"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-eye-line"></i>
+                </div>
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Car 7 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=2023%20Audi%20Q7%20luxury%20SUV%20in%20white%20color%2C%20professional%20studio%20lighting%2C%20clean%20background%2C%20high-end%20dealership%20quality%20photo%2C%20front%20three-quarter%20view%2C%20detailed%2C%20realistic&width=600&height=400&seq=8&orientation=landscape"
+                alt="2023 Audi Q7"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-semibold text-gray-900">Audi Q7</h3>
+                <span
+                  class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >2023</span
+                >
+              </div>
+              <div class="text-2xl font-bold text-primary mb-3">$61,500</div>
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-dashboard-3-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">10,450 mi</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-settings-5-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Automatic</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-gas-station-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Diesel</span>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center justify-center"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-eye-line"></i>
+                </div>
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Car 8 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=2024%20Range%20Rover%20Sport%20luxury%20SUV%20in%20dark%20green%20color%2C%20professional%20studio%20lighting%2C%20clean%20background%2C%20high-end%20dealership%20quality%20photo%2C%20front%20three-quarter%20view%2C%20detailed%2C%20realistic&width=600&height=400&seq=9&orientation=landscape"
+                alt="2024 Range Rover Sport"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Range Rover Sport
+                </h3>
+                <span
+                  class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >2024</span
+                >
+              </div>
+              <div class="text-2xl font-bold text-primary mb-3">$83,700</div>
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-dashboard-3-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">4,890 mi</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-settings-5-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Automatic</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-gray-500 mb-1"
+                  >
+                    <i class="ri-gas-station-line"></i>
+                  </div>
+                  <span class="text-xs text-gray-600">Hybrid</span>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center justify-center"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-eye-line"></i>
+                </div>
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 text-center">
+          <button
+            class="bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap inline-flex items-center"
+          >
+            <div class="w-5 h-5 flex items-center justify-center mr-2">
+              <i class="ri-car-line"></i>
+            </div>
+            View All Inventory
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
+          Why Choose Us
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-8 h-8 flex items-center justify-center text-primary"
+              >
+                <i class="ri-verified-badge-line ri-2x"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Quality Assurance
+            </h3>
+            <p class="text-gray-600">
+              Every vehicle undergoes a rigorous 150-point inspection before
+              being listed in our inventory.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-8 h-8 flex items-center justify-center text-primary"
+              >
+                <i class="ri-money-dollar-circle-line ri-2x"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Transparent Pricing
+            </h3>
+            <p class="text-gray-600">
+              No hidden fees or surprise costs. We provide upfront pricing with
+              detailed vehicle history reports.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-8 h-8 flex items-center justify-center text-primary"
+              >
+                <i class="ri-customer-service-2-line ri-2x"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Expert Support
+            </h3>
+            <p class="text-gray-600">
+              Our team of automotive experts is here to help you find the
+              perfect vehicle for your needs and budget.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center transition-transform hover:shadow-lg hover:-translate-y-1"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-8 h-8 flex items-center justify-center text-primary"
+              >
+                <i class="ri-shield-check-line ri-2x"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Extended Warranty
+            </h3>
+            <p class="text-gray-600">
+              Drive with confidence with our comprehensive warranty options on
+              all certified pre-owned vehicles.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-wrap justify-center items-center gap-8">
+          <div class="flex items-center">
+            <div
+              class="w-10 h-10 flex items-center justify-center text-gray-700 mr-2"
+            >
+              <i class="ri-award-fill ri-2x"></i>
+            </div>
+            <span class="text-gray-700 font-medium">Certified Dealer</span>
+          </div>
+          <div class="flex items-center">
+            <div
+              class="w-10 h-10 flex items-center justify-center text-gray-700 mr-2"
+            >
+              <i class="ri-calendar-check-fill ri-2x"></i>
+            </div>
+            <span class="text-gray-700 font-medium">15+ Years Experience</span>
+          </div>
+          <div class="flex items-center">
+            <div
+              class="w-10 h-10 flex items-center justify-center text-gray-700 mr-2"
+            >
+              <i class="ri-star-fill ri-2x"></i>
+            </div>
+            <span class="text-gray-700 font-medium">4.9/5 Customer Rating</span>
+          </div>
+          <div class="flex items-center">
+            <div
+              class="w-10 h-10 flex items-center justify-center text-gray-700 mr-2"
+            >
+              <i class="ri-user-smile-fill ri-2x"></i>
+            </div>
+            <span class="text-gray-700 font-medium"
+              >10,000+ Happy Customers</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
+          Our Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-sm text-center transition-all hover:shadow-md hover:bg-white"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-8 h-8 flex items-center justify-center text-primary"
+              >
+                <i class="ri-shopping-cart-line ri-2x"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Car Buying</h3>
+            <p class="text-gray-600 mb-4">
+              Browse our extensive inventory of premium vehicles and find your
+              perfect match with personalized assistance.
+            </p>
+            <a
+              href="#"
+              class="text-primary font-medium inline-flex items-center hover:underline"
+            >
+              Learn More
+              <div class="w-5 h-5 flex items-center justify-center ml-1">
+                <i class="ri-arrow-right-line"></i>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-sm text-center transition-all hover:shadow-md hover:bg-white"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-8 h-8 flex items-center justify-center text-primary"
+              >
+                <i class="ri-exchange-dollar-line ri-2x"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Car Selling
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Get the best value for your vehicle with our hassle-free selling
+              process and competitive offers.
+            </p>
+            <a
+              href="#"
+              class="text-primary font-medium inline-flex items-center hover:underline"
+            >
+              Learn More
+              <div class="w-5 h-5 flex items-center justify-center ml-1">
+                <i class="ri-arrow-right-line"></i>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-sm text-center transition-all hover:shadow-md hover:bg-white"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-8 h-8 flex items-center justify-center text-primary"
+              >
+                <i class="ri-swap-line ri-2x"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Trade-In Options
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Upgrade your ride with our flexible trade-in program that
+              maximizes the value of your current vehicle.
+            </p>
+            <a
+              href="#"
+              class="text-primary font-medium inline-flex items-center hover:underline"
+            >
+              Learn More
+              <div class="w-5 h-5 flex items-center justify-center ml-1">
+                <i class="ri-arrow-right-line"></i>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-sm text-center transition-all hover:shadow-md hover:bg-white"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-8 h-8 flex items-center justify-center text-primary"
+              >
+                <i class="ri-bank-card-line ri-2x"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Financing Solutions
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Access competitive rates and flexible payment plans through our
+              network of trusted financial partners.
+            </p>
+            <a
+              href="#"
+              class="text-primary font-medium inline-flex items-center hover:underline"
+            >
+              Learn More
+              <div class="w-5 h-5 flex items-center justify-center ml-1">
+                <i class="ri-arrow-right-line"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary/5">
+      <div class="container mx-auto px-4">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Ready to Find Your Dream Car?
+              </h2>
+              <p class="text-gray-600 mb-6">
+                Visit our showroom today or schedule a test drive online. Our
+                team is ready to help you find the perfect vehicle that fits
+                your lifestyle and budget.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button
+                  class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center justify-center"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center mr-2">
+                    <i class="ri-calendar-check-line"></i>
+                  </div>
+                  Schedule Test Drive
+                </button>
+                <button
+                  class="bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap flex items-center justify-center"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center mr-2">
+                    <i class="ri-phone-line"></i>
+                  </div>
+                  Contact Us
+                </button>
+              </div>
+            </div>
+            <div class="md:w-1/2 bg-gray-100">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20car%20showroom%20interior%20with%20luxury%20vehicles%20on%20display%2C%20professional%20lighting%2C%20clean%20and%20elegant%20environment%2C%20customers%20looking%20at%20cars%2C%20sales%20representatives%20helping%20clients%2C%20high-end%20dealership&width=800&height=600&seq=10&orientation=landscape"
+                alt="Car Showroom"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <a
+              href="#"
+              class="text-3xl font-['Pacifico'] text-white mb-6 inline-block"
+              >logo</a
+            >
+            <p class="text-gray-400 mb-6">
+              Premium automobile dealership offering exceptional vehicles and
+              outstanding customer service since 2008.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-all"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-all"
+              >
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-all"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-all"
+              >
+                <i class="ri-youtube-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Inventory</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-all"
+                  >Financing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Contact Information</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1"
+                >
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-400"
+                  >123 Automotive Drive, Los Angeles, CA 90001</span
+                >
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1"
+                >
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-400">(555) 123-4567</span>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1"
+                >
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-400">info@premiumautos.com</span>
+              </li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mt-6 mb-4">Business Hours</h3>
+            <ul class="space-y-2">
+              <li class="text-gray-400">Monday - Friday: 9:00 AM - 8:00 PM</li>
+              <li class="text-gray-400">Saturday: 9:00 AM - 6:00 PM</li>
+              <li class="text-gray-400">Sunday: 10:00 AM - 4:00 PM</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe to our newsletter for the latest inventory updates and
+              special offers.
+            </p>
+            <form class="mb-6">
+              <div class="flex mb-2">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  class="flex-1 px-4 py-2 rounded-l border-none text-gray-900 text-sm focus:outline-none"
+                />
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-4 py-2 rounded-r !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+
+            <h3 class="text-lg font-semibold mb-4">We Accept</h3>
+            <div class="flex space-x-3">
+              <div
+                class="w-10 h-6 flex items-center justify-center text-gray-400"
+              >
+                <i class="ri-visa-fill ri-lg"></i>
+              </div>
+              <div
+                class="w-10 h-6 flex items-center justify-center text-gray-400"
+              >
+                <i class="ri-mastercard-fill ri-lg"></i>
+              </div>
+              <div
+                class="w-10 h-6 flex items-center justify-center text-gray-400"
+              >
+                <i class="ri-paypal-fill ri-lg"></i>
+              </div>
+              <div
+                class="w-10 h-6 flex items-center justify-center text-gray-400"
+              >
+                <i class="ri-apple-fill ri-lg"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-gray-800 text-center">
+          <p class="text-gray-500 text-sm">
+            © 2025 Premium Auto Sales. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile menu toggle
+        const menuButton = document.querySelector(".md\\:hidden");
+        const mobileMenu = document.createElement("div");
+        mobileMenu.className =
+          "fixed inset-0 bg-gray-900 bg-opacity-90 z-50 flex flex-col items-center justify-center transform transition-transform duration-300 translate-x-full";
+        mobileMenu.innerHTML = `
+                      <button class="absolute top-4 right-4 text-white w-10 h-10 flex items-center justify-center">
+                          <i class="ri-close-line ri-2x"></i>
+                      </button>
+                      <nav class="flex flex-col space-y-6 text-center">
+                          <a href="#" class="text-white text-xl font-medium">Home</a>
+                          <a href="#" class="text-gray-300 text-xl font-medium hover:text-white">Inventory</a>
+                          <a href="#" class="text-gray-300 text-xl font-medium hover:text-white">Services</a>
+                          <a href="#" class="text-gray-300 text-xl font-medium hover:text-white">About Us</a>
+                          <a href="#" class="text-gray-300 text-xl font-medium hover:text-white">Contact</a>
+                      </nav>
+                      <div class="mt-12">
+                          <button class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap flex items-center justify-center">
+                              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                  <i class="ri-exchange-dollar-line"></i>
+                              </div>
+                              Sell Your Car
+                          </button>
+                      </div>
+                  `;
+        document.body.appendChild(mobileMenu);
+
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+
+        mobileMenu.querySelector("button").addEventListener("click", function () {
+          mobileMenu.classList.add("translate-x-full");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+
+
